@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     async onDelete() {
-      this.axios.delete('/api/assets/' + this.asset.id)
+      this.$axios.delete('/api/assets/' + this.asset.id)
       .then((res)=>{
         if(res.status==202) {
           alert('Asset is deleted successfully!')

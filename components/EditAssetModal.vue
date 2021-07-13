@@ -66,7 +66,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      this.axios.put('/api/assets/' + this.asset.id, this.asset)
+      this.$axios.put('/api/assets/' + this.asset.id, this.asset)
       .then((res)=>{
         if(res.status==202) {
           alert('Update successful!')

@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     async getAll() {
-      await this.$axios.get('https://lentrix.tk/api/assets')
+      await this.$axios.get('/api/assets')
       .then((res)=>{
         if(res.status==200){
           this.assets = res.data
@@ -66,7 +66,7 @@ export default {
       this.$bvModal.show('editAssetModal')
     },
     onDelete(selectedAsset) {
-      this.selectedAsset = this.selectedAsset
+      this.selectedAsset = selectedAsset
       this.$bvModal.show('deleteAssetModal')
     }
   },

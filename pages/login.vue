@@ -11,10 +11,12 @@
                                 <label for="email">Email</label>
                                 <input type="email" v-model="creds.email" id="email" class="form-control">
                             </div>
+
                             <div class="form-group">
                                 <label for="password">Password</label>
                                 <input type="password" v-model="creds.password" id="password" class="form-control">
                             </div>
+
                             <div class="form-group">
                                 <button class="btn btn-primary">Login</button>
                             </div>
@@ -30,16 +32,14 @@
 export default {
     data() {
         return{
-            creds: {
-
-            }
+            creds: {}
         }
     },
+
     methods: {
-        async onLogin() {
+        async onLogin(){
             await this.$auth.loginWith('local', {data:this.creds})
             .then((res)=>{
-
             })
             .catch((err)=>{
                 alert('Invalid credentials')

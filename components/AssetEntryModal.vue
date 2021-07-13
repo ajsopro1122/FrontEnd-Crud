@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     async onSubmit() {
-      this.$axios.post('https://lentrix.tk/api/assets', this.asset)
+      this.$axios.post('/api/assets', this.asset)
       .then((res)=>{
         if(res.status==202) {
           alert('Successfully added the asset')

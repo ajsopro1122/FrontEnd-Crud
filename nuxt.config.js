@@ -63,16 +63,16 @@ export default {
           property: false
         },
         endpoints: {
-          login: {url: 'https://lentrix.tk/api/login', method: 'post'},
-          logout: {url: 'https://lentrix.tk/api/logout', method: 'post'},
-          user: {url: 'https://lentrix.tk/api/user', method: 'get'},
-          register: {url: 'https://lentrix.tk/api/register', method: 'post'},
+          login: {url: 'http://localhost:8000/api/login', method: 'post'},
+          logout: {url: '/api/logout', method: 'post'},
+          user: {url: '/api/user', method: 'get'},
+          register: {url: '/api/register', method: 'post'},
         }
       }
     },
     redirect: {
       login: '/login',
-      logout: 'login',
+      logout: '/login',
       home: '/dashboard'
     }
   },
@@ -80,7 +80,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    basedUrl: 'https://lentrix.tk'
+    baseUrl: 'http://localhost:8000'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
