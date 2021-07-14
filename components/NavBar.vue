@@ -10,7 +10,7 @@
           <b-navbar-nav class="ml-auto">
             <template v-if="$auth.loggedIn">
             <b-nav-item href="/dashboard">Dashboard</b-nav-item>
-            <b-nav-item href="/assets">Assets</b-nav-item>
+            <b-nav-item href="/mods">Mods</b-nav-item>
             <b-nav-item href="#" @click.prevent="onLogout">Logout</b-nav-item>
             </template>
 

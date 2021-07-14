@@ -63,7 +63,7 @@ export default {
           property: false
         },
         endpoints: {
-          login: {url: 'http://localhost:8000/api/login', method: 'post'},
+          login: {url: '/api/login', method: 'post'},
           logout: {url: '/api/logout', method: 'post'},
           user: {url: '/api/user', method: 'get'},
           register: {url: '/api/register', method: 'post'},
@@ -80,7 +80,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: 'http://localhost:8000'
+    baseUrl: 'https://lentrix.tk/ajsopro/'
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
